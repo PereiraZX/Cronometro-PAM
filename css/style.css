@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --bg_calc: rgb(218, 218, 218);
+    --bg_tela: rgb(255, 255, 255);
+    --color_border: rgb(0, 0, 0);
+    --color_reset: rgb(255, 0, 0);
+    --color_reset-hover: rgb(255, 71, 71);
+    --text_white: #f2f2f2;
+    --color_btt-hover: rgb(182, 182, 182);
+    --color_play: rgb(52, 192, 24);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    height: max-content;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.inteiro {
+    background-color: var(--bg_calc);
+    border-radius: 50px;
+    border: 1px solid var(--color_border);
+    padding: 2rem;
+    width: 400px;
+    height: max-content;
+}
+
+#tempo {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+#tela {
+    background-color: var(--bg_tela);
+    border: 1px solid var(--color_border);
+    width: 330px;
+    border-radius: 20px;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 6rem;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.bt {
+    border-radius: 50%;
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#play {
+    color: white;
+    background-color: var(--color_play);
+}
+
+.bt button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 1rem 2rem;
+    border: 1px solid var(--color_border);
+    font-size: 20px;
+}
+
+.bt button:hover {
+    background-color: var(--color_btt-hover);
+}
+
+#reset button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: var(--text_white);
+    padding: 1rem 2rem;
+    background-color: var(--color_reset);
+}
+
+#reset button:hover {
+    transition: 0.3s;
+    background-color: var(--color_reset-hover);
+}
+
+@media (max-width: 600px) {
+
+    .inteiro {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 90%;
+    }
+
+    #tela {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    }
+
+    #tempo {
+    font-size: 5rem;
+    }
+
+.bt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bt button, #reset button {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 3rem;
+
+}
+
+#reset button {
+    font-size: .7rem !important;
+}
+}
+
+@media (max-width: 450px) {
+
+.inteiro {
+    text-align: center;
+    height: 40%;
+}
+
+#tela {
+    height: 60%;
+}
+
+#tempo {
+    font-size: 4rem;
+}
+
+.bt button, #reset button {
+    padding: 2rem;
+}
+
+}
+
+@media (max-width: 400px) {
+
+#tempo {
+    font-size: 3rem;
+}
+
+.inteiro {
+    width: 95%;
+}
+}
